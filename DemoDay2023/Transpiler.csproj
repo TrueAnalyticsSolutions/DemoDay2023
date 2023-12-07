@@ -7,8 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="MtconnectTranspiler" Version="1.0.8.2-prerelease" />
-  </ItemGroup>
-
 </Project>

@@ -18,9 +18,8 @@ namespace Adapter
 
             using(var adapter = new TcpAdapter(tcpOptions))
             {
-                // Start the adapter, providing our IAdapterSource
-                adapter.Start(new Source());
-
+                // TODO: Start the adapter, providing our IAdapterSource
+                
                 Consoul.Write($"Adapter running @ http://*:{adapter.Port}");
 
                 if (File.Exists(PUTTY_EXE) && Consoul.Ask("Would you like to run PuTTY?"))
@@ -32,6 +31,8 @@ namespace Adapter
                 adapter.Stop();
             }
         }
+
+
 
 
 
