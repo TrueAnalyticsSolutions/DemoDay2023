@@ -8,7 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MtconnectTranspiler" Version="1.0.8.2-prerelease" />
+    <PackageReference Include="MtconnectTranspiler" Version="2.5.0-review" />
+    <PackageReference Include="MtconnectTranspiler.Sinks.CSharp" Version="2.5.0-review" />
   </ItemGroup>
 
 </Project>

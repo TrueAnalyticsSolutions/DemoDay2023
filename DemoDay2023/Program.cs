@@ -1,5 +1,6 @@
 ﻿
 using MtconnectTranspiler;
+using MtconnectTranspiler.XmiOptions;
 using Transpiler;
 
 namespace DemoDay2023
@@ -18,16 +19,18 @@ namespace DemoDay2023
             const string SysML_FilePath = $@"{Constants.FOLDER}\MTConnect SysML Model.xml";
             const string GeneratedFilePath = $@"{Constants.FOLDER}\output.txt";
 
-            var dispatchOptions = new FromFileOptions() {  Filepath = SysML_FilePath };
-            using (var dispatcher = new TranspilerDispatcher(dispatchOptions))
-            {
-                dispatcher.AddSink(new MyTranspiler(GeneratedFilePath));
+            //var dispatchOptions = new FromFileOptions() {  Filepath = SysML_FilePath };
+            //using (var dispatcher = new TranspilerDispatcher(dispatchOptions))
+            //{
+            //    dispatcher.AddSink(new MyTranspiler(GeneratedFilePath));
 
-                dispatcher.TranspileAsync().Wait();
+            //    dispatcher.TranspileAsync().Wait();
 
-                Console.WriteLine("Done!");
-                Console.ReadLine();
-            }
+            //    Console.WriteLine("Done!");
+            //    Console.ReadLine();
+            //}
+
+            ModelAwareTranspiler.ExportTypes(GeneratedFilePath);
         }
     }
 }
